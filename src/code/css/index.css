@@ -108,6 +108,10 @@ header {
   opacity: var(--effect-icon-opacity-hover);
 }
 
+.header__icon.icon--light-theme {
+  filter: invert(0);
+}
+
 .header__title {
   color: var(--color-foreground);
   font-size: var(--font-size-large);
@@ -177,6 +181,10 @@ header {
   filter: invert(1);
   height: var(--icon-size-standard);
   width: var(--icon-size-standard);
+}
+
+.sidebar__icon.icon--light-theme {
+  filter: invert(0);
 }
 
 .sidebar__item {

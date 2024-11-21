@@ -1,10 +1,11 @@
 import '../css/reset.css';
 import '../css/index.css';
 
-import { toggleSidebar } from './toggle.js';
+import { toggleSidebar, toggleTheme } from './toggle.js';
 
 const initialLoad = () => {
   toggleSidebar();
+  toggleTheme();
 }
 
 export default initialLoad();
