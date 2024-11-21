@@ -7,8 +7,8 @@
     <link href="../../assets/images/favicon/lanezedfer-favicon-32x32.ico" rel="icon" type="image/x-icon" sizes="32x32">
     <link href="../../assets/images/favicon/lanezedfer-favicon-16x16.ico" rel="icon" type="image/x-icon" sizes="16x16">
   </head>
-  <body>
-    <header>
+  <body id="body">
+    <header id="header">
       <input type="checkbox" id="sidebar_toggle" name="sidebar_toggle" class="toggle">
       <label for="sidebar_toggle"><img src="../../assets/images/icons/sidebar-toggle-icon.svg" alt="sidebar-toggle-icon" class="header__icon"></label>
       <a href="https://github.com/Lanezedfer/to-do-list" target="_blank" rel="noopener noreferrer" class="header__title">To-Do List</a>
@@ -18,7 +18,7 @@
       </div>
     </header>
     <aside>
-      <nav class="sidebar">
+      <nav id="sidebar" class="sidebar">
         <h1 class="sidebar__title">Filters</h1>
         <hr>
         <ul class="sidebar__list">
@@ -37,11 +37,11 @@
         <p class="sidebar__item"><img src="../../assets/images/icons/add-icon.svg" alt="add-project-icon" class="sidebar__icon">Add Project</p>
       </nav>
     </aside>
-    <main>
+    <main id="main">
       <h1 class="main__txt-filter">All Tasks</h1>
       <div id="main_content"></div>
     </main>
-    <footer>
+    <footer id="footer">
       <p>Developed by <a href="https://github.com/Lanezedfer" target="_blank" rel="noopener noreferrer" class="txt-link">Lanezedfer</a></p>
     </footer>
   </body>
