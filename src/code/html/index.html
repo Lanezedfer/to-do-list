@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link href="../../assets/images/favicon/lanezedfer-favicon-32x32.ico" rel="icon" type="image/x-icon" sizes="32x32">
+    <link href="../../assets/images/favicon/lanezedfer-favicon-16x16.ico" rel="icon" type="image/x-icon" sizes="16x16">
+  </head>
+  <body>
+    <header>
+      <input type="checkbox" id="sidebar_toggle" name="sidebar_toggle" class="toggle">
+      <label for="sidebar_toggle"><img src="../../assets/images/icons/sidebar-toggle-icon.svg" alt="sidebar-toggle-icon" class="header__icon"></label>
+      <a href="https://github.com/Lanezedfer/to-do-list" target="_blank" rel="noopener noreferrer" class="header__title">To-Do List</a>
+      <div class="header__toggle-theme-container">
+        <input type="checkbox" id="theme_toggle" name="theme_toggle" class="toggle">
+        <label for="theme_toggle" class="header__toggle-theme"></label>
+      </div>
+    </header>
+    <aside>
+      <nav class="sidebar">
+        <h1 class="sidebar__title">Filters</h1>
+        <hr>
+        <ul class="sidebar__list">
+          <li class="sidebar__item"><img src="../../assets/images/icons/all-icon.svg" alt="filter-all-tasks-icon" class="sidebar__icon">All Tasks</li>
+          <li class="sidebar__item"><img src="../../assets/images/icons/today-icon.svg" alt="filter-today-icon" class="sidebar__icon">Today</li>
+          <li class="sidebar__item"><img src="../../assets/images/icons/week-icon.svg" alt="filter-week-icon" class="sidebar__icon">This Week</li>
+          <li class="sidebar__item"><img src="../../assets/images/icons/month-icon.svg" alt="filter-month-icon" class="sidebar__icon">This Month</li>
+          <li class="sidebar__item"><img src="../../assets/images/icons/important-icon.svg" alt="filter-important-icon" class="sidebar__icon">Important</li>
+          <li class="sidebar__item"><img src="../../assets/images/icons/incomplete-icon.svg" alt="filter-completed-icon" class="sidebar__icon">Incomplete</li>
+          <li class="sidebar__item"><img src="../../assets/images/icons/completed-icon.svg" alt="filter-completed-icon" class="sidebar__icon">Completed</li>
+        </ul>
+        <h1 class="sidebar__title">Projects</h1>
+        <hr>
+        <ul id="project_list" class="sidebar__items"></ul>
+        <form action="/" method="get" id="add_project_form"></form>
+        <p class="sidebar__item"><img src="../../assets/images/icons/add-icon.svg" alt="add-project-icon" class="sidebar__icon">Add Project</p>
+      </nav>
+    </aside>
+    <main>
+      <h1 class="main__txt-filter">All Tasks</h1>
+      <div id="main_content"></div>
+    </main>
+    <footer>
+      <p>Developed by <a href="https://github.com/Lanezedfer" target="_blank" rel="noopener noreferrer" class="txt-link">Lanezedfer</a></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+/* Box sizing rules */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+}
+
+/* Default styles for <a> elements that don't have a class */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Natural flow and rhythm in <article> */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Default styles for <body> */
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+button, h1, h2, h3, h4, h5, h6, input, label {
+  line-height: 1.1;
+}
+
+/* Remove built-in form typography styles */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Default styles for media */
+canvas, img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Avoid text overflows */
+h1, h2, h3, h4, h5, h6, p {
+  overflow-wrap: break-word;
+}
+
+/* Remove default padding */
+ol[class], ul[class] {
+  padding: 0;
+}
+
+/* Remove list-style on <ol> and <ul> elements with a class attribute */
+ol[role='list'], ul[role='list'] {
+  list-style: none;
+}
+
+/* Avoid tiny <textarea> that don't have rows attribute */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Add extra scroll margin when using anchored links (Adjust for fixed headers) */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Create a root stacking context (For JavaScript framework) */
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Remove all animations and transitions for users that prefer it removed */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
