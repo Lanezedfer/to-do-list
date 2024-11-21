@@ -22,13 +22,13 @@
         <h1 class="sidebar__title">Filters</h1>
         <hr>
         <ul class="sidebar__list">
-          <li class="sidebar__item"><img src="../../assets/images/icons/all-icon.svg" alt="filter-all-tasks-icon" class="sidebar__icon">All Tasks</li>
-          <li class="sidebar__item"><img src="../../assets/images/icons/today-icon.svg" alt="filter-today-icon" class="sidebar__icon">Today</li>
-          <li class="sidebar__item"><img src="../../assets/images/icons/week-icon.svg" alt="filter-week-icon" class="sidebar__icon">This Week</li>
-          <li class="sidebar__item"><img src="../../assets/images/icons/month-icon.svg" alt="filter-month-icon" class="sidebar__icon">This Month</li>
-          <li class="sidebar__item"><img src="../../assets/images/icons/important-icon.svg" alt="filter-important-icon" class="sidebar__icon">Important</li>
-          <li class="sidebar__item"><img src="../../assets/images/icons/incomplete-icon.svg" alt="filter-completed-icon" class="sidebar__icon">Incomplete</li>
-          <li class="sidebar__item"><img src="../../assets/images/icons/completed-icon.svg" alt="filter-completed-icon" class="sidebar__icon">Completed</li>
+          <li id="all_tasks" class="sidebar__item"><img src="../../assets/images/icons/all-icon.svg" alt="filter-all-tasks-icon" class="sidebar__icon">All Tasks</li>
+          <li id="today" class="sidebar__item"><img src="../../assets/images/icons/today-icon.svg" alt="filter-today-icon" class="sidebar__icon">Today</li>
+          <li id="week" class="sidebar__item"><img src="../../assets/images/icons/week-icon.svg" alt="filter-week-icon" class="sidebar__icon">This Week</li>
+          <li id="month" class="sidebar__item"><img src="../../assets/images/icons/month-icon.svg" alt="filter-month-icon" class="sidebar__icon">This Month</li>
+          <li id="important" class="sidebar__item"><img src="../../assets/images/icons/important-icon.svg" alt="filter-important-icon" class="sidebar__icon">Important</li>
+          <li id="incomplete" class="sidebar__item"><img src="../../assets/images/icons/incomplete-icon.svg" alt="filter-completed-icon" class="sidebar__icon">Incomplete</li>
+          <li id="completed" class="sidebar__item"><img src="../../assets/images/icons/completed-icon.svg" alt="filter-completed-icon" class="sidebar__icon">Completed</li>
         </ul>
         <h1 class="sidebar__title">Projects</h1>
         <hr>
@@ -38,7 +38,7 @@
       </nav>
     </aside>
     <main id="main">
-      <h1 class="main__txt-filter">All Tasks</h1>
+      <h1 id="filter_title" class="main__txt-filter"></h1>
       <div id="main_content"></div>
     </main>
     <footer id="footer">
