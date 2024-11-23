@@ -52,6 +52,8 @@ const headerIcons = document.querySelectorAll('.header__icon');
 const sidebarIcons = document.querySelectorAll('.sidebar__icon');
 
 function toggleLightTheme() {
+  const projectIcons = document.querySelectorAll('.project-list__icon');
+
   root.style.setProperty('--color-foreground', '#000000');
   root.style.setProperty('--color-foreground-secondary', '#FFFFFF');
   root.style.setProperty('--color-background', '#F1F5F9');
@@ -62,9 +64,12 @@ function toggleLightTheme() {
   
   headerIcons.forEach(icon => { icon.classList.add('icon--light-theme'); });
   sidebarIcons.forEach(icon => { icon.classList.add('icon--light-theme'); });
+  projectIcons.forEach(icon => { icon.classList.add('icon--light-theme'); });
 }
 
 function toggleDarkTheme() {
+  const projectIcons = document.querySelectorAll('.project-list__icon');
+
   root.style.setProperty('--color-foreground', '#FFFFFF');
   root.style.setProperty('--color-foreground-secondary', '#000000');
   root.style.setProperty('--color-background', '#0F0F0F');
@@ -75,6 +80,7 @@ function toggleDarkTheme() {
 
   headerIcons.forEach(icon => { icon.classList.remove('icon--light-theme'); });
   sidebarIcons.forEach(icon => { icon.classList.remove('icon--light-theme'); });
+  projectIcons.forEach(icon => { icon.classList.remove('icon--light-theme'); });
 }
 
 export function toggleTheme() {
