@@ -1,6 +1,6 @@
 import deleteIcon from '../../assets/images/icons/delete-icon.svg';
 
-import { toggleTheme } from './toggle.js';
+import { toggleTheme, hideSidebar } from './toggle.js';
 import { filterByAllTasks, filterByProject } from './filter.js';
 
 export let projects = loadProjects();
@@ -35,6 +35,7 @@ function createList(project, index) {
     localStorage.setItem('lastFilter', 'project');
     localStorage.setItem('lastProjectIndex', index);
     filterByProject(index);
+    hideSidebar();
   });
   list.classList.add('project-list');
 

@@ -1,10 +1,12 @@
 import '../css/reset.css';
 import '../css/index.css';
 import '../css/project.css';
+import '../css/task.css';
 
 import { toggleSidebar, toggleTheme } from './toggle.js';
 import { applyStoredFilter, filterByAllTasks, filterByToday, filterByWeek, filterByMonth, filterByImportant, filterByIncomplete, filterByCompleted } from './filter.js';
 import { renderProjectsToSidebar, renderAddProjectForm, confirmAddProject } from './project.js';
+import { addTask } from './task.js';
 
 const initialLoad = () => {
   toggleSidebar();
@@ -76,4 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
 document.getElementById('add_project_form').addEventListener('submit', (event) => {
   event.preventDefault();
   confirmAddProject();
+});
+
+document.getElementById('add_task_form').addEventListener('submit', (event) => {
+  event.preventDefault();
+  addTask();
 });
