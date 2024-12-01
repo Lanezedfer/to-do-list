@@ -55,7 +55,7 @@ function createCard(task, id) {
 function createTop(task, id) {
   const top = document.createElement('div');
   top.classList.add('task__top');
-  top.appendChild(createTaskStatusLabel(task, id))
+  top.appendChild(createTaskStatusLabel(task, id));
   top.appendChild(createTaskNameTxt(task.name, id));
   top.appendChild(createTaskDueDateTxt(task.dueDate));
   return top;
@@ -248,7 +248,7 @@ function createTaskNameLabel() {
   label.textContent = 'Name';
   label.htmlFor = 'task_name_input';
   label.classList.add('add-task-form__label');
-  label.id = 'task_name_label'
+  label.id = 'task_name_label';
   return label;
 }
 
