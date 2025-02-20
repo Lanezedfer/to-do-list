@@ -17,8 +17,10 @@
   --color-background-tertiary: #1b1e20;
   --color-accent: #0ae3f6;
   --color-accent-hover: #07b6c6;
+  --color-warning: #f61d0a;
 
   /* Font Sizes */
+  --font-size-small: 1em;
   --font-size-standard: 1.3em;
   --font-size-medium: 1.7em;
   --font-size-large: 2.3em;

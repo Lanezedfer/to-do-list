@@ -1,5 +1,6 @@
 import "../css/reset.css";
 import "../css/index.css";
+import "../css/project.css";
 
 import {
   applyStoredFilter,
@@ -11,12 +12,18 @@ import {
   filterByToday,
   filterByWeek,
 } from "./filter.js";
+import {
+  confirmAddProject,
+  renderProjectForm,
+  renderProjects,
+} from "./project.js";
 import { toggleSidebar, toggleTheme } from "./toggle.js";
 
 const initialLoad = () => {
   toggleSidebar();
   toggleTheme();
   applyStoredFilter();
+  renderProjects();
 };
 
 export default initialLoad();
@@ -69,4 +76,13 @@ document.addEventListener("DOMContentLoaded", () => {
     filterByCompleted();
     localStorage.setItem("lastFilter", "completed");
   });
+
+  // Project
+  const addProjectPrompt = document.getElementById("add_project");
+  addProjectPrompt.addEventListener("click", renderProjectForm);
+});
+
+document.getElementById("project_form").addEventListener("submit", (event) => {
+  event.preventDefault();
+  confirmAddProject();
 });

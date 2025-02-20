@@ -50,6 +50,8 @@ const headerIcons = document.querySelectorAll(".header__icon");
 const sidebarIcons = document.querySelectorAll(".sidebar__icon");
 
 function toggleDarkTheme() {
+  const projectIcons = document.querySelectorAll(".project__icon");
+
   root.style.setProperty("--color-foreground-primary", "#ffffff");
   root.style.setProperty("--color-foreground-secondary", "#000000");
   root.style.setProperty("--color-background-primary", "#0f0f0f");
@@ -61,12 +63,17 @@ function toggleDarkTheme() {
   headerIcons.forEach((icon) => {
     icon.classList.remove("icon--light-theme");
   });
+  projectIcons.forEach((icon) => {
+    icon.classList.remove("icon--light-theme");
+  });
   sidebarIcons.forEach((icon) => {
     icon.classList.remove("icon--light-theme");
   });
 }
 
 function toggleLightTheme() {
+  const projectIcons = document.querySelectorAll(".project__icon");
+
   root.style.setProperty("--color-foreground-primary", "#000000");
   root.style.setProperty("--color-foreground-secondary", "#ffffff");
   root.style.setProperty("--color-background-primary", "#f1f5f9");
@@ -76,6 +83,9 @@ function toggleLightTheme() {
   root.style.setProperty("--color-accent-hover", "#0a6cf6");
 
   headerIcons.forEach((icon) => {
+    icon.classList.add("icon--light-theme");
+  });
+  projectIcons.forEach((icon) => {
     icon.classList.add("icon--light-theme");
   });
   sidebarIcons.forEach((icon) => {

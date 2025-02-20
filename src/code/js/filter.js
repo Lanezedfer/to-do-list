@@ -1,3 +1,5 @@
+import { projects } from "./project.js";
+
 const filterTitle = document.getElementById("filter_title");
 
 export function filterByAllTasks() {
@@ -28,8 +30,13 @@ export function filterByCompleted() {
   filterTitle.textContent = "Completed";
 }
 
+export function filterByProject(index) {
+  filterTitle.textContent = projects[index].name;
+}
+
 export function applyStoredFilter() {
   const lastFilter = localStorage.getItem("lastFilter");
+  const lastProjectIndex = localStorage.getItem("lastProjectIndex");
   if (lastFilter) {
     switch (lastFilter) {
       case "all":
@@ -52,6 +59,13 @@ export function applyStoredFilter() {
         break;
       case "completed":
         filterByCompleted();
+        break;
+      case "project":
+        if (lastProjectIndex !== null && projects[lastProjectIndex]) {
+          filterByProject(lastProjectIndex);
+        } else {
+          filterByAllTasks();
+        }
         break;
       default:
         break;
