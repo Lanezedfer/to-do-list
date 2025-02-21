@@ -2,6 +2,7 @@
 ---------------------------------------------------------------------------------------------------- */
 /* Task Containers */
 .task {
+  animation: task 0.5s ease-in-out;
   background-color: var(--color-background-secondary);
   margin: 1em 0;
   padding: 0.7em;
@@ -157,6 +158,7 @@
 ---------------------------------------------------------------------------------------------------- */
 /* Task Form Containers */
 .task-form {
+  animation: taskForm 0.5s ease-in-out;
   background-color: var(--color-background-secondary);
 }
 
@@ -276,6 +278,28 @@
 
 /* Media Queries
 ---------------------------------------------------------------------------------------------------- */
+@keyframes task {
+  from {
+    opacity: 0;
+    transform: translateX(-1em);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes taskForm {
+  from {
+    opacity: 0;
+    transform: translateY(-1em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media only screen and (max-width: 965px) {
   .task__top {
     grid-template-columns: auto 1fr;
