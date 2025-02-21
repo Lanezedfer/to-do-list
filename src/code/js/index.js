@@ -1,6 +1,7 @@
 import "../css/reset.css";
 import "../css/index.css";
 import "../css/project.css";
+import "../css/task.css";
 
 import {
   applyStoredFilter,
@@ -17,6 +18,7 @@ import {
   renderProjectForm,
   renderProjects,
 } from "./project.js";
+import { addTask } from "./task.js";
 import { toggleSidebar, toggleTheme } from "./toggle.js";
 
 const initialLoad = () => {
@@ -85,4 +87,9 @@ document.addEventListener("DOMContentLoaded", () => {
 document.getElementById("project_form").addEventListener("submit", (event) => {
   event.preventDefault();
   confirmAddProject();
+});
+
+document.getElementById("task_form").addEventListener("submit", (event) => {
+  event.preventDefault();
+  addTask();
 });

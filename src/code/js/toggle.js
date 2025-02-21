@@ -1,8 +1,8 @@
 // Sidebar
-export function toggleSidebar() {
-  const media = window.matchMedia("(max-width: 900px)");
-  const sidebarToggle = document.getElementById("sidebar_toggle");
+const media = window.matchMedia("(max-width: 900px)");
+const sidebarToggle = document.getElementById("sidebar_toggle");
 
+export function toggleSidebar() {
   const body = document.getElementById("body");
   const header = document.getElementById("header");
   const sidebar = document.getElementById("sidebar");
@@ -44,6 +44,13 @@ export function toggleSidebar() {
   }
 }
 
+export function hideSidebar() {
+  if (media.matches) {
+    sidebarToggle.checked = true;
+    toggleSidebar();
+  }
+}
+
 // Theme
 const root = document.documentElement;
 const headerIcons = document.querySelectorAll(".header__icon");
@@ -51,6 +58,8 @@ const sidebarIcons = document.querySelectorAll(".sidebar__icon");
 
 function toggleDarkTheme() {
   const projectIcons = document.querySelectorAll(".project__icon");
+  const taskIcons = document.querySelectorAll(".task__icon");
+  const addTaskPromptIcon = document.querySelectorAll(".add-task-prompt__icon");
 
   root.style.setProperty("--color-foreground-primary", "#ffffff");
   root.style.setProperty("--color-foreground-secondary", "#000000");
@@ -60,6 +69,9 @@ function toggleDarkTheme() {
   root.style.setProperty("--color-accent", "#0ae3f6");
   root.style.setProperty("--color-accent-hover", "#07b6c6");
 
+  addTaskPromptIcon.forEach((icon) => {
+    icon.classList.remove("icon--light-theme");
+  });
   headerIcons.forEach((icon) => {
     icon.classList.remove("icon--light-theme");
   });
@@ -69,10 +81,15 @@ function toggleDarkTheme() {
   sidebarIcons.forEach((icon) => {
     icon.classList.remove("icon--light-theme");
   });
+  taskIcons.forEach((icon) => {
+    icon.classList.remove("icon--light-theme");
+  });
 }
 
 function toggleLightTheme() {
   const projectIcons = document.querySelectorAll(".project__icon");
+  const taskIcons = document.querySelectorAll(".task__icon");
+  const addTaskPromptIcon = document.querySelectorAll(".add-task-prompt__icon");
 
   root.style.setProperty("--color-foreground-primary", "#000000");
   root.style.setProperty("--color-foreground-secondary", "#ffffff");
@@ -82,6 +99,9 @@ function toggleLightTheme() {
   root.style.setProperty("--color-accent", "#0756c6");
   root.style.setProperty("--color-accent-hover", "#0a6cf6");
 
+  addTaskPromptIcon.forEach((icon) => {
+    icon.classList.add("icon--light-theme");
+  });
   headerIcons.forEach((icon) => {
     icon.classList.add("icon--light-theme");
   });
@@ -89,6 +109,9 @@ function toggleLightTheme() {
     icon.classList.add("icon--light-theme");
   });
   sidebarIcons.forEach((icon) => {
+    icon.classList.add("icon--light-theme");
+  });
+  taskIcons.forEach((icon) => {
     icon.classList.add("icon--light-theme");
   });
 }
