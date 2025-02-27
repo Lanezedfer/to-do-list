@@ -1,0 +1,112 @@
+/* Project
+---------------------------------------------------------------------------------------------------- */
+.project__icon {
+  filter: invert(1);
+  height: var(--icon-size-standard);
+  opacity: var(--effect-icon-opacity);
+  width: var(--icon-size-standard);
+}
+
+.project__icon:hover {
+  cursor: pointer;
+  opacity: var(--effect-icon-opacity-hover);
+}
+
+.project__icon.icon--light-theme {
+  filter: invert(0);
+}
+
+.project__list {
+  align-items: center;
+  display: flex;
+  font-size: var(--font-size-standard);
+  font-weight: var(--font-weight-bold);
+  gap: 0.5em;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0.5em 0;
+  padding-left: 0.5em;
+}
+
+.project__list:hover {
+  color: var(--color-accent);
+  cursor: pointer;
+}
+
+/* Project Form
+---------------------------------------------------------------------------------------------------- */
+.project-form {
+  align-items: center;
+  animation: projectForm 0.5s ease-in-out;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.project-form__btn-add {
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: 0.3em;
+  color: var(--color-foreground-secondary);
+  cursor: pointer;
+  font-size: var(--font-size-standard);
+  font-weight: var(--font-weight-bold);
+  margin: 0.5em;
+  padding: 0.3em 1em;
+}
+
+.project-form__btn-add:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.project-form__btn-cancel {
+  background: transparent;
+  border: 0.1em solid var(--color-accent);
+  border-radius: 0.3em;
+  color: var(--color-foreground);
+  cursor: pointer;
+  font-size: var(--font-size-standard);
+  font-weight: var(--font-weight-bold);
+  margin: 0.5em;
+  padding: 0.3em 1em;
+}
+
+.project-form__btn-cancel:hover {
+  color: var(--color-accent);
+}
+
+.project-form__input {
+  border: 0.1em solid var(--color-foreground-primary);
+  border-radius: 0.3em;
+  font-size: var(--font-size-standard);
+  padding: 0.3em;
+  width: 100%;
+}
+
+.project-form__input:focus {
+  border: 0.1em solid var(--color-accent);
+  outline-style: none;
+}
+
+.project-form__input--error {
+  border: 0.1em solid var(--color-warning);
+}
+
+.project-form__txt-error {
+  color: var(--color-warning);
+  font-size: var(--font-size-small);
+}
+
+/* Media Queries
+---------------------------------------------------------------------------------------------------- */
+@keyframes projectForm {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
